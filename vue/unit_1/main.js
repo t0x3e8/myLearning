@@ -13,5 +13,13 @@ new Vue({
       this.books.push({ title: this.newBook });
       this.newBook = "";
     }
+  },
+  filters: { 
+    capitalize: function(value) {
+      return value.toUpperCase();
+    },
+    addPrefix: function(value) {
+      return value + " book";
+    }
   }
 });

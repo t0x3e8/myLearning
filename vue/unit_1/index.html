@@ -11,10 +11,10 @@
   <div id="app">
     {{ header }}
     <ul>
-      <li v-for="book in books">{{ book.title }}</li>
+      <li v-for="book in books">{{ book.title | capitalize  | addPrefix}}</li>
     </ul>
 
-    <input type="text" name="newBook" id="newBook" v-model="newBook">
+    <input type="text" name="newBook" id="newBook" v-model="newBook" @keyup.enter="addBook">
     <button v-on:click="addBook">Add</button>
   </div>
 
