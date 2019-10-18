@@ -9,11 +9,13 @@
 <body>
   
   <div id="app">
-    <books-list :books="books" header="The list of books:"></books-list>
+    <books-list :books="books" header="The list of books:" v-if="isDestroyed"></books-list>
 
     <input type="text" name="newBook" id="newBook" v-model="newBook" @keyup.enter="addBook">
     {{ countLetters }}
     <button v-on:click="addBook">Add</button>
+    <hr>
+    <button v-on:click="destroyComponent">Show/hide</button>
   </div>
 
 </body>

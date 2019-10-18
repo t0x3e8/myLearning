@@ -15,4 +15,4 @@ How to create own filtres and use them,
 Why do we have computed members, (when in-template prop. become to complex, we can use computed),
 Add component to the app, and using prop,
 Using props with : (v-bind) and just a text (without v-bind),
-
+Vue lifecycle methods: created, mounted, updated, destoyed 

@@ -6,6 +6,18 @@ Vue.component('books-list',
       capitalize: function(value) {
         return value.toUpperCase();
       }
+    },
+    created: function() {
+      console.log('created');
+    },
+    updated: function() {
+      console.log('updated');
+    },
+    mounted: function() {
+      console.log('mounted');
+    },
+    destroyed: function() {
+      console.log('destoyed');
     }
   }
 )
@@ -18,12 +30,16 @@ new Vue({
       { title: "The God father" },
       { title: "Bible" }
     ],
-    newBook: ""
+    newBook: "", 
+    isDestroyed: true
   },
   methods: {
     addBook: function() {
       this.books.push({ title: this.newBook });
       this.newBook = "";
+    },
+    destroyComponent: function() {
+      this.isDestroyed = !this.isDestroyed;
     }
   },
   computed: { 
