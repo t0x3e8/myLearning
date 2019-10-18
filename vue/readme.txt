@@ -10,5 +10,9 @@ What is v-bind and how to make a shortcut with i.e ':disabled' instead of v-bind
 How to use toggle classes base on conditions i.e <div :class="[email.length < 2 ? 'red' : 'green']"> or <div :class{red: email.length < 2}>
 What is v-text="" instead of {{ msg }},
 What is v-html (outputs filered text without html syntext),
-What is v-once bidning,
-How to create own filtres and use them
+What is v-once binding,
+How to create own filtres and use them,
+Why do we have computed members, (when in-template prop. become to complex, we can use computed),
+Add component to the app, and using prop,
+Using props with : (v-bind) and just a text (without v-bind),
+

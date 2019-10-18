@@ -9,10 +9,7 @@
 <body>
   
   <div id="app">
-    {{ header }}
-    <ul>
-      <li v-for="book in books">{{ book.title | capitalize  | addPrefix}}</li>
-    </ul>
+    <books-list :books="books" header="The list of books:"></books-list>
 
     <input type="text" name="newBook" id="newBook" v-model="newBook" @keyup.enter="addBook">
     {{ countLetters }}
