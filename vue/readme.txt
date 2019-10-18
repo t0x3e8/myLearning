@@ -8,3 +8,7 @@ How to add data and methods to vue,
 How to set events and how to make a shortcut with @,
 What is v-bind and how to make a shortcut with i.e ':disabled' instead of v-bind:disabled,
 How to use toggle classes base on conditions i.e <div :class="[email.length < 2 ? 'red' : 'green']"> or <div :class{red: email.length < 2}>
+What is v-text="" instead of {{ msg }},
+What is v-html (outputs filered text without html syntext),
+What is v-once bidning,
+How to create own filtres and use them
