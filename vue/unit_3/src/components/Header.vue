@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-nav>
+    <b-nav tabs>
       <b-nav-item disabled>Quiz of the world</b-nav-item>
       <b-nav-item disabled>Question 4/13</b-nav-item>
     </b-nav>
