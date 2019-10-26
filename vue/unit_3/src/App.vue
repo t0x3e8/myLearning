@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
-    <Header />
+  <div id="app" v-if="questions.length > 0">
+    <Header :totalAnswered="totalAnswered" :correctAnswers="correctAnswers" />
     <b-container class="bv-example-row">
       <b-row>
         <b-col sm="6" offset="3">
-          <QuestionBox />
+          <QuestionBox :currentQuestion="questions[index]" :next="next" :submit="submit" />
         </b-col>
       </b-row>
     </b-container>
@@ -23,11 +23,29 @@ export default {
   },
   data : function() {
     return {
-      questions: []
+      questions: [],
+      index: 0,
+      correctAnswers: 0,
+      totalAnswered: 0
     }    
   },
+  methods: {
+    next(wasQuestionAnswered) {
+      if(!wasQuestionAnswered) {
+        this.totalAnswered++;
+      }
+
+      this.index++;
+    },
+    submit(isCorrectAnswer) {
+      if (isCorrectAnswer) 
+        this.correctAnswers++;
+      
+      this.totalAnswered++;
+    }
+  },
   mounted: function() {
-    fetch('https://opentdb.com/api.php?amount=10&category=24&difficulty=easy', {
+    fetch('https://opentdb.com/api.php?amount=1000', {
       method: 'get'
     }).then((data) => {
       return data.json();
