@@ -5,7 +5,9 @@
       <router-link to="/dogs">Dogs</router-link> |
       <router-link to="/cats">Cats</router-link>
     </div>
-    <router-view/>
+    <b-container>
+      <router-view/>
+    </b-container>
   </div>
 </template>
 

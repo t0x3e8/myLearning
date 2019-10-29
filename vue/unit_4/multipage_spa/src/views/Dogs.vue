@@ -1,18 +1,26 @@
 <template>
   <div>
-    <h1>Dogs</h1>
+    <h1>Here are our dogs</h1>
     <div>
-      <b-table striped hover :items="dogs"></b-table>
+      <b-table striped hover :items="dogs">
+        <template v-slot:cell(name)="data">
+          <router-link :to="'/pets/dogs/' + data.index">
+            {{ data.value }}
+          </router-link>
+        </template>
+      </b-table>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      dogs: this.$store.state.dogs
-    }
+  computed: {
+    ...mapState([
+      'dogs'
+    ])
   }
 }
 </script>

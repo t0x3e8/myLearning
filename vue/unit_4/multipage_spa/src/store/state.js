@@ -1,5 +1,5 @@
-import cats from '../store/cats.json'
-import dogs from '../store/dogs.json'
+import cats from '@/data/cats.js'
+import dogs from '@/data/dogs.js'
 
 export default {
   cats,

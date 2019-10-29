@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <hr>
+    <h4>Yes? Great! Start by selecting your favourit pet ...</h4>
   </div>
 </template>
 

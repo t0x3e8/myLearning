@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Do you want to adopt a pet?"/>
+    <Message msg="Do you want to adopt a pet?"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Message from '@/components/Message.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Message
   }
 }
 </script>
